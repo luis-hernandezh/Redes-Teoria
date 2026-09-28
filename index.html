@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servidor MCP - Modelado Matemático</title>
+
+    <!--Hojas de estilo-->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/lotka-volterra.css">
+    <link rel="stylesheet" href="css/calor.css">
+
+    <!--Configuración para renderizar fórmulas matemáticas en LaTeX-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+    <!--Barra de navegación (Luis)-->
+    <nav class="navbar">
+        <div class="logo">Grupo 07</div>
+        <ul class="nav-links">
+            <li><a href="#mcp-arquitectura">Arquitectura MCP</a></li>
+            <li><a href="#lotka-volterra">Lotka-Volterra</a></li>
+            <li><a href="#ecuacion-calor">Ecuación del Calor</a></li>
+            <li><a href="http://perucoleccion.com/SO/index.html">Volver al Índice General</a></li>
+
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Sección 1: Introducción y MCP (Luis) -->
+        <section id="mcp-arquitectura" class="section-global">
+            <div class="container">
+                <h1>Model Context Protocol (MCP) para Sistemas Dinámicos</h1>
+                <p class="lead">
+                    Los Modelos de Lenguaje (LLMs) carecen de rigor numérico para resolver sistemas dinámicos complejos. Nuestro servidor MCP actúa como un orquestador que intercepta las peticiones y las delega a motores de cálculo exactos en Python.
+                </p>
+
+                <div class="flow-diagram">
+                    <h3>Flujo de Ejecución del Servidor</h3>
+                    <div class="flow-steps">
+                        <div class="step">1. Entrada de Usuario (LLM)</div>
+                        <div class="arrow">↓</div>
+                        <div class="step">2. server.py (Validación MCP)</div>
+                        <div class="arrow">↓</div>
+                        <div class="step">3. matematica.py (Cálculo Numérico)</div>
+                        <div class="arrow">↓</div>
+                        <div class="step">4. visualizacion.py (Renderizado)</div>
+                        <div class="arrow">↓</div>
+                        <div class="step">5. Respuesta JSON + Gráficos Base64</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 2: Lotka-Volterra (Espacio para Piero) -->
+        <section id="lotka-volterra">
+            <div class="container">
+                <h2>Modelo Presa-Depredador (Lotka-Volterra)</h2>
+                <!-- Piero: Agrega aquí tus explicaciones, fórmulas y gráficas de series de tiempo -->
+                <p><em>Contenido en desarrollo por Piero...</em></p>
+            </div>
+        </section>
+
+        <!-- Sección 3: Ecuación del Calor (Espacio para Alejandro) -->
+        <section id="ecuacion-calor">
+            <div class="container">
+                <h2>La Ecuación del Calor en 2D</h2>
+                <!-- Alejandro: Agrega aquí tu explicación de diferencias finitas, mallas térmicas y heatmaps -->
+                <p><em>Contenido en desarrollo por Alejandro...</em></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página (Luis) -->
+    <footer class="footer">
+        <p>Proyecto 1 - Computación Científica</p>
+        <p>Integrantes: Luis, Piero, Alejandro</p>
+    </footer>
+
+</body>
+
+</html>
